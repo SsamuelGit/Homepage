@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <div class="header" id="header">
+        <h2>
+            Header
+        </h2>
+    </div>
     
+    <div class="content">
+        <p>
+            content blabla
+        </p>
+    </div>
+
+    <script src="script.js">
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
 </body>
 </html>
